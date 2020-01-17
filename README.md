@@ -9,7 +9,7 @@ If you use Laraver Deployer with private Github Repos you can simply remove conf
 
 Run this command in you project folder
 
-```
+```bash
 git clone https://github.com/RusTorg/laravel-deployer-config-remover.git
 mv laravel-deployer-config-remover/recipe recipe
 rm -rf laravel-deployer-config-remover
@@ -17,7 +17,7 @@ rm -rf laravel-deployer-config-remover
 
 in config/deploy.php add new include
 
-```
+```php
 'include' => [
     'recipe/clean_config.php',
 ],
@@ -25,8 +25,12 @@ in config/deploy.php add new include
 
 and register new hook
 
-```
+```php
 'done' => [
     'clean:deployerConfig'
 ],
 ```
+
+Enjoy!
+
+If you need custom functionality, you can write to me or make a pull request.
